@@ -13,21 +13,16 @@ public class Hotel {
         this.name = name;
         available = totalRooms;
         rooms = new Room[totalRooms];
-
-        for (int i = 0; i < rooms.length; i++) {
-            rooms[i] = new Room();
-        }
-
-
+        fillArray();
 
     }
 
-    /*public void fillArray() {
+    public void fillArray() {
 
         for (int i = 0; i < rooms.length -1 ; i++) {
             rooms[i] = new Room();
         }
-    }*/
+    }
 
     public String getName() {
         return name;
