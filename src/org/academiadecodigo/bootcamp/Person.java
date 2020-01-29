@@ -3,7 +3,7 @@ package org.academiadecodigo.bootcamp;
 public class Person {
 
     private String name;
-    private int indexRoom;
+    private int indexRoom = -1;
     private Hotel hotel;
     private boolean status;
 

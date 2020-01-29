@@ -13,7 +13,10 @@ public class Hotel {
         this.name = name;
         available = totalRooms;
         rooms = new Room[totalRooms];
+
         fillArray();
+
+
 
     }
 
