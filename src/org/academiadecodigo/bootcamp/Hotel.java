@@ -2,36 +2,46 @@ package org.academiadecodigo.bootcamp;
 
 public class Hotel {
 
-    Room[] rooms;
+    private String name;
     private int available;
+    private Room[] rooms;
 
 
-    public Hotel(int totalRooms) {
 
-        rooms = new Room[totalRooms];
+    public Hotel(String name,int totalRooms) {
+
+        this.name = name;
         available = totalRooms;
+        rooms = new Room[totalRooms];
+
+        for (int i = 0; i < rooms.length; i++) {
+            rooms[i] = new Room();
+        }
+
+
 
     }
 
-    public void fillArray() {
+    /*public void fillArray() {
 
         for (int i = 0; i < rooms.length -1 ; i++) {
             rooms[i] = new Room();
         }
+    }*/
+
+    public String getName() {
+        return name;
     }
-
-
 
     public int checkInHotel() {
 
         if (available > 0) {
             available --;
 
-            for (int i = 0; i < rooms.length - 1 ; i++) {
+            for (int i = 0; i < rooms.length; i++) {
 
                 if (rooms[i].getStatus()) {
                     rooms[i].setStatus(false);
-
                     return i;
                 }
            }
@@ -47,7 +57,7 @@ public class Hotel {
         available ++;
 
         rooms[index].setStatus(true);
-        System.out.println("Your checkout is completed, thank you for being with us.");
+
 
     }
 }
