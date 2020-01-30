@@ -2,22 +2,19 @@ package org.academiadecodigo.bootcamp;
 
 public class Room {
 
-    private boolean status;
-    private int index;
+    private boolean available;
 
     public Room() {
-        status = true;
+        available = true;
     }
 
+    public boolean isAvailable() {
 
-    public boolean getStatus() {
-
-        return status;
+        return available;
     }
 
-    public void setStatus(boolean status) {
+    public void setAvailable(boolean available) {
 
-        this.status = status;
-
+        this.available = available;
     }
 }
